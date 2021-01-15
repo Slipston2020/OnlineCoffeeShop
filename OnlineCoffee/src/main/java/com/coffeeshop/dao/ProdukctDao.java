@@ -12,5 +12,9 @@ public interface ProdukctDao {
 
     Boolean save (Produkct produkct) throws IOException;
 
+    Boolean delll (Produkct produkct) throws IOException;
+
+    Produkct findProdByID (int prodId) throws SQLException,IOException;
+
 
 }

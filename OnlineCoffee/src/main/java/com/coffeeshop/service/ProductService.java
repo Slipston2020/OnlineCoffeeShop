@@ -9,4 +9,6 @@ import java.sql.SQLException;
 public interface ProductService {
 
     public String addproduct (Produkct produkct) throws IOException, SQLException;
+    public String delproduct (Produkct produkct) throws IOException, SQLException;
+    public String findProd (int id) throws IOException, SQLException;
 }

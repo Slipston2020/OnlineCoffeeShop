@@ -25,5 +25,32 @@ public class ProducktServiceImpl implements ProductService {
             return "Fine!";
         }
 
+    @Override
+        public String delproduct(Produkct produkct) throws IOException, SQLException {
+        produkctDao.delll(produkct);
+        return "Fine!";
 
     }
+    @Override
+    public String findProd(int id) throws IOException, SQLException {
+       Produkct foundProduct =  produkctDao.findProdByID(id);
+        if (id == 0) {
+            return "No iD entered";
+        }
+
+        if (foundProduct != null) {
+
+                         return "Fine! product ID: " + id + " type ID: "
+                        + foundProduct.getType() + " name : "
+                        + foundProduct.getName() + " brand: "
+                        + foundProduct.getBrand() + " price: "
+                        + foundProduct.getPrice();
+            }
+
+
+
+        return null;
+    }
+
+
+}
